@@ -1,0 +1,1 @@
+Önceden oluşturulmuş 'Çalışan' adlı bir sınıfa, kaydı alınan çalışanın bilgilerini (isim, katılma yılı, maaş, adres) yazdıracak ve hesaplayacak bir program.
