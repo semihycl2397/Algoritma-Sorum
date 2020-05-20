@@ -1,0 +1,138 @@
+package Ans;
+import java.util.*;
+class Student{
+  String name;
+  int roll_no;
+}
+
+class Ans{
+  public static void main(String[] args){
+    Student s = new Student();
+    s.name = "Semih";
+    s.roll_no = 2;
+    System.out.println("Name is "+s.name+" and roll number is "+s.roll_no);
+  }
+
+   
+  @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone(); //To change body of generated methods, choose Tools | Templates.
+    }
+}				
+class Triangle{
+  int a,b,c;
+  public double getArea(){
+    double s = (a+b+c)/2.0;
+    return Math.pow((s*(s-a)*(s-b)*(s-c)),.5);
+  }
+  public double getPerimeter(){
+    return (a+b+c)/2.0;
+  }
+}
+
+class Ans{
+  public static void main(String[] args){
+    Triangle t = new Triangle();
+    t.a = 2;
+    t.b = 5;
+    t.c = 6;
+    System.out.println(t.getArea());
+    System.out.println(t.getPerimeter());
+  }
+}	
+class Rectangle{
+  int length;
+  int breadth;
+  public Rectangle(int l, int b){
+    length = l;
+    breadth = b;
+  }
+  public int getArea(){
+    return length*breadth;
+  }
+  public int getPerimeter(){
+    return 2*(length+breadth);
+  }
+}
+
+class Ans{
+  public static void main(String[] args){
+    Rectangle a = new Rectangle(4,5);
+    Rectangle b = new Rectangle(5,8);
+    System.out.println("Area : "+a.getArea()+" Perimeter is "+a.getPerimeter());
+    System.out.println("Area : "+b.getArea()+" Perimeter is "+b.getPerimeter());
+  }
+}			
+class Area{
+  int length;
+  int breadth;
+  public Area(int l, int b){
+    length = l;
+    breadth = b;
+  }
+  public int getArea(){
+    return length*breadth;
+  }
+}
+
+class Ans{
+  public static void main(String[] args){
+    Scanner s = new Scanner(System.in);
+    int l,b;
+
+    System.out.println("Enter length");
+    l = s.nextInt();
+    System.out.println("Enter breadth");
+    b = s.nextInt();
+
+    Area a = new Area(l,b);
+    System.out.println("Area : "+a.getArea());
+  }
+}	
+class Complex{
+  int real;
+  int imag;
+  public Complex(int r, int i){
+    real = r;
+    imag = i;
+  }
+
+  public static Complex add(Complex a, Complex b){
+    return new Complex((a.real+b.real),(a.imag+b.imag));
+  }
+
+  public static Complex diff(Complex a, Complex b){
+    return new Complex((a.real-b.real),(a.imag-b.imag));
+  }
+
+  public static Complex product(Complex a, Complex b){
+    return new Complex(((a.real*b.real)-(a.imag*b.imag)),((a.real*b.imag)+(a.imag*b.real)));
+  }
+
+  public void printComplex(){
+    if(real == 0 && imag!=0){
+      System.out.println(imag+"i");
+    }
+    else if(imag == 0 && real!=0){
+      System.out.println(real);
+    }
+    else{
+      System.out.println(real+"+"+imag+"i");
+    }
+  }
+
+}
+
+class Ans{
+  public static void main(String[] args){
+    Complex c = new Complex(4,5);
+    Complex d = new Complex(9,4);
+
+    Complex e = Complex.add(c,d);
+    Complex f = Complex.diff(c,d);
+    Complex g = Complex.product(c,d);
+    e.printComplex();
+    f.printComplex();
+    g.printComplex();
+  }
+}			
